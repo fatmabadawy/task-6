@@ -6,8 +6,7 @@ function Form({ onAddTask, onCancel }) {
   const [duration, setDuration] = useState("");
   const [date, setDate] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     const [year, month, day] = date.split('-');
     const monthAbbreviation = new Date(date).toLocaleString('default', { month: 'short' });
     onAddTask({
